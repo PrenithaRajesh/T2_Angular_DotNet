@@ -1,0 +1,22 @@
+<table>
+    <thead>
+        <tr>
+        <th>PId</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Category</th>
+        <th>Premium</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" (click)="onSelect(product)">
+        <td>{{ product.pId }}</td>
+        <td>{{ product.pName }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.isPremium }}</td>
+        </tr>
+    </tbody>
+</table>
