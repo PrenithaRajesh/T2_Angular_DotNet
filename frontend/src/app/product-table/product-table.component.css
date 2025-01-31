@@ -34,3 +34,9 @@ tbody td button {
     padding: 0.5rem 1rem;
     cursor: pointer;
 }
+
+tbody td button:hover {
+    background: #203b57;
+    opacity: 0.95;
+    color: white;
+}
