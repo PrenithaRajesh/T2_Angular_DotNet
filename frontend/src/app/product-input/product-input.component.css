@@ -1,3 +1,67 @@
-.form-container{
-    flex-basis: 30%;
+.form-container {
+    float: left;
+    width: 50%;
+    background: #f9f9f9;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 0.3rem;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 0 5px 0 10px;
+}
+
+.radio-group {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.buttons input {
+    width: 48%;
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.buttons input[type="submit"] {
+    background: #203b57;
+    color: white;
+}
+
+.buttons input[type="reset"] {
+    border: 2px solid #203b57;
+    color: #203b57;
+}
+
+.buttons input:hover {
+    opacity: 0.8;
+}
+
