@@ -7,9 +7,16 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  selectedProduct: Product | undefined;
+  selectedProduct: Product = {
+    pId: '',
+    pName: '',
+    price: '',
+    quantity: '',
+    category: '',
+    isPremium: '',
+  };
 
   onProductSelected(product: Product) {
-    this.selectedProduct = product;
+    this.selectedProduct = { ...product };
   }
 }

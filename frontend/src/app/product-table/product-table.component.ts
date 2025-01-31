@@ -22,7 +22,10 @@ export class ProductTableComponent implements OnInit, OnDestroy{
   }
 
   onSelect(product: Product) {
-    this.productSelected.emit(product);
+    if(confirm('Are you sure you want to edit this product?')){
+      console.log('Product emitted: ', product);
+      this.productSelected.emit(product);
+    }
   }
 
   ngOnDestroy() {
