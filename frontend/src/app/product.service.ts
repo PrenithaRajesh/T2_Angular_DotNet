@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Product, ProductToAdd} from './product.model';
+import { Product } from './product.model';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
@@ -22,14 +22,14 @@ export class ProductService {
       });
   }
 
-  addProduct(product: ProductToAdd) {
+  addProduct(product: Product) {
     return this.http
       .post<Product>('http://localhost:5000/api/Product/AddProduct', product).subscribe(() => {
         this.getProducts();
       });
   }
 
-  updateProduct(product: ProductToAdd) {
+  updateProduct(product: Product) {
     return this.http
       .put<Product>('http://localhost:5000/api/Product/UpdateProduct', product).subscribe(() => {
         this.getProducts();

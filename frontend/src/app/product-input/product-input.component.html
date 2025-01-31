@@ -1,27 +1,27 @@
 <div class="form-container">
     <form (submit)="onSubmitForm(form)" #form="ngForm">
         <label for="pid">Product Id:</label>
-        <input type="text" name="pId" id="pId" [(ngModel)]="productToEdit.pId" required>
+        <input type="text" name="pId" id="pId" [(ngModel)]="product.pId" required>
 
         <br>
 
         <label for="pname">Product Name:</label>
-        <input type="text" name="pName" id="pName" [(ngModel)]="productToEdit.pName" required>
+        <input type="text" name="pName" id="pName" [(ngModel)]="product.pName" required>
 
         <br>
 
         <label for="price">Price:</label>
-        <input type="number" step="0.01" id="price" name="price" [(ngModel)]="productToEdit.price" required>
+        <input type="number" step="0.01" id="price" name="price" [(ngModel)]="product.price" required>
 
         <br>
 
         <label for="quantity">Quantity:</label>
-        <input type="number" id="quantity" name="quantity" [(ngModel)]="productToEdit.quantity" required>
+        <input type="number" id="quantity" name="quantity" [(ngModel)]="product.quantity" required>
 
         <br>
 
         <label for="category">Category:</label>
-        <select name="category" id="category" [(ngModel)]="productToEdit.category" required>
+        <select name="category" id="category" [(ngModel)]="product.category" required>
             <option value="Electronics">Electronics</option>
             <option value="Apparel">Apparel</option>
             <option value="Home and Living">Home and Living</option>
@@ -33,14 +33,14 @@
 
         <label for="isPremium">Premium:</label>
         <div class="radio-group">
-            <input type="radio" name="isPremium" id="premiumYes" [(ngModel)]="productToEdit.isPremium" [value]="true"> Yes
-            <input type="radio" name="isPremium" id="premiumNo" [(ngModel)]="productToEdit.isPremium" [value]="false"> No
+            <input type="radio" name="isPremium" id="premiumYes" [(ngModel)]="product.isPremium" [value]="true"> Yes
+            <input type="radio" name="isPremium" id="premiumNo" [(ngModel)]="product.isPremium" [value]="false"> No
         </div>
 
 
         <div class="buttons">
-            <input type="submit" value="Add Product" *ngIf="productToEdit.pId === ''">
-            <input type="submit" value="Update Product" *ngIf="productToEdit.pId !== ''">
+            <input type="submit" value="Add Product" *ngIf="productToEdit === undefined">
+            <input type="submit" value="Update Product" *ngIf="productToEdit !== undefined">
             <input type="reset" value="Clear">
         </div>
     </form>
