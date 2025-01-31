@@ -35,4 +35,11 @@ export class ProductService {
         this.getProducts();
       });
   }
+
+  deleteProduct(pId: number) {
+    return this.http
+      .delete<Product>('http://localhost:5000/api/Product/DeleteProduct/' + pId).subscribe(() => {
+        this.getProducts();
+      });
+  }
 }

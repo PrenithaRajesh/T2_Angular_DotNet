@@ -17,6 +17,9 @@
         <td>{{ product.quantity }}</td>
         <td>{{ product.category }}</td>
         <td>{{ product.isPremium }}</td>
+        <td>
+            <button (click)="onDelete(product,$event)">Delete</button>
+        </td>
         </tr>
     </tbody>
 </table>

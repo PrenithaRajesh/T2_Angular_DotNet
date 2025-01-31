@@ -28,6 +28,14 @@ export class ProductTableComponent implements OnInit, OnDestroy{
     }
   }
 
+  onDelete(product: Product, event: Event) {
+    event.stopPropagation();
+    if(confirm('Are you sure you want to delete this product?')){
+      console.log('Product deleted: ', product);
+      this.productService.deleteProduct(+product.pId);
+    }
+  }
+
   ngOnDestroy() {
     this.productService.products.unsubscribe();
   }
